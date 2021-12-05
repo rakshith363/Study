@@ -9,12 +9,11 @@ int binarysearch(int array[100],int n){
     cout<<"Enter te element to search"<<endl;
     cin>>k;
     
-    while(start!=end)
+    while(start<=end)
     {
 
         int mid=(start+end)/2;
         if(k==array[mid]){
-            cout<<mid<<endl;
             return mid;
         }
         else if(k<array[mid]){
@@ -23,9 +22,7 @@ int binarysearch(int array[100],int n){
         else{
             start=mid+1;
         }
-
     }
-    cout<<-1<<endl;
     return -1;
 }
 
@@ -43,9 +40,7 @@ int main(){
     cout<<"Enter test cases"<<endl;
     cin>>j;
     for(t=1;t<=j;t++){
-        int output=binarysearch(array,n);
+    cout<<binarysearch(array,n)<<endl;
     }
-
-    
 
 }
